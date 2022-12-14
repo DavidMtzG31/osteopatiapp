@@ -360,14 +360,6 @@ h3{
   text-align: justify;
 }
 
-.flex_video {
-  display: flex;
-  justify-content: center;
-  max-width: 100rem;
-  margin: 0 auto;
-  width: 80%;
-}
-
 /* Visceral */
 .tratamiento_hero_visceral {
   background-image: url(../img/hero_visceral.jpg);
@@ -475,4 +467,14 @@ li {
 
 ul {
   display: block;
+}
+
+.flex_video {
+  display: flex;
+  justify-content: center;
+}
+
+iframe {
+  width: 560px;
+  height: 315px
 }
