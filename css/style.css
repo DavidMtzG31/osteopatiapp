@@ -1,0 +1,478 @@
+/*Custom Properties*/
+
+:root{
+  --primario: #495C83; 
+  --primarioOscuro: #4642cf;
+  --secundario: #FAEA48;  /* Hover y encabezados */
+  --secundarioOscuro: #E5EBB2; /* Solo se usa una vez */
+  --blanco: #FFF;
+  --negro: #000;
+  --bgAzul: #08143c;
+  --bgRosa: #971d31;
+
+  --fuentePrincipal: 'Noto Sans', sans-serif;
+  --fuenteTitulos: 'Patrick Hand', cursive;
+}
+
+/*Box Sizing Border Box*/
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;  /*Hace que 1rem=10px*/
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+
+  /*Globales*/
+
+body{
+    background-color: var(--primario);
+    font-size: 1.6rem;
+    line-height: 1.5;  /*Interlineado*/
+  }
+
+p{
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+  }
+
+a{
+    text-decoration: none;
+  }
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  /* height: 100%; */
+  }
+
+  .contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 90%;
+}
+
+h1, h2, h3{
+    text-align: center;
+    color: var(--secundario);
+    font-family: var(--fuenteTitulos);
+  }
+
+h1{
+    font-size: 4rem;
+  }
+
+h2{
+    font-size: 3.2rem;
+}
+
+h3{
+   font-size: 3rem; 
+}
+
+/*Header*/
+.hero{
+  background-image: url(../img/hero_nav.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 3rem;
+}
+
+.contenido_hero{
+  background-color: rgb(0 0 0 / 70%);
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .hero{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45rem;
+    margin-bottom: 3rem;
+  }
+
+  .contenido_hero--flex {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.hero_texto {
+  color: var(--blanco);
+  font-size: 4rem;
+
+  padding-bottom: 10rem;
+}
+
+@media (min-width: 768px) {
+  .hero_texto {
+    font-size: 8rem;
+  }
+}
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+/*Footer*/
+.footer{
+  background-color: var(--primarioOscuro);
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+.footer__texto{
+  text-align: center;
+  font-family: var(--fuentePrincipal);
+  font-size: 2.2rem;
+}
+
+
+/*Navegacion*/
+.navegacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5rem;
+  gap: 3rem;
+}
+@media (min-width: 768px) {
+  .navegacion {
+    flex-direction: row;
+  }
+}
+
+.navegacion__enlace{
+  font-family: var(--fuentePrincipal);
+  color: var(--blanco);
+  font-size: 2.2rem;
+  justify-content: end;
+}
+@media (min-width: 768px) {
+  .navegacion__enlace {
+    font-size: 2.2rem;
+  }
+}
+
+.navegacion__enlace--activo,
+.navegacion__enlace:hover{
+  color: var(--secundario);
+}
+
+/*Nosotros*/
+.nosotros{
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+}
+
+@media (min-width: 768px){
+  .nosotros{
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;  
+  }
+}
+
+.nosotros__imagen{
+  grid-row: 1 / 2;
+}
+
+.parrafo_nosotros{
+  text-align: justify;
+}
+
+@media (min-width: 768px){
+   .nosotros__imagen{
+    grid-column: 2 / 3;
+   }
+}
+
+/*Bloques*/
+
+.bloques{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 768px){
+   .bloques{
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+   }
+}
+
+.bloque{
+  text-align: center;
+}
+
+.bloque__titulo{
+  margin: 0;
+}
+
+/*Pagina del producto*/
+
+@media (min-width: 768px){
+   .camisa{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+   }
+}
+
+.boton_flex {
+  display: flex;
+  justify-content: center;
+}
+
+.boton_tratamiento {
+  width: 90%;
+  background-color: var(--secundario);
+  border: none;
+  font-size: 2rem;
+  font-family: var(--fuentePrincipal);
+  padding: 2rem; 
+  transition: background-color .3s ease;
+  grid-column: 1 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.boton_tratamiento p {
+  margin: 0;
+  padding: 0;
+  color: var(--blanco);
+}
+
+.boton_tratamiento:hover{
+  cursor: pointer;
+  background-color: var(--secundarioOscuro);
+}
+
+.button{
+  display: flex;
+  justify-content: center;
+}
+
+.mobile-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.mobile-grid .tipos {
+  margin-bottom: 6rem;
+}
+.mobile-grid .texto_craneal,
+.mobile-grid .texto_estructural {
+  background-color: var(--bgAzul);
+  text-align: justify;
+  padding: 5rem;
+}
+
+.mobile-grid .texto_visceral,
+.mobile-grid .texto_pediatrica {
+  background-color: var(--bgRosa);
+  text-align: justify;
+  padding: 5rem;
+}
+
+.tipos .imagen_craneal img{
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .tipos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+.imagen_tipo {
+    height: 10rem;
+  }
+.mobile-grid .tipos {
+    margin-bottom: 0;
+
+  }
+
+.imagen_visceral {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2 ;
+  }
+.texto_visceral {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3 ;
+  }
+
+.imagen_pediatrica {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2 ;
+  }
+.texto_pediatrica {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3 ;
+  }
+.imagen_visceral,
+.imagen_estructural,
+.imagen_pediatrica {
+  height: 100%;
+}
+
+
+}
+
+
+/* SECCIONES */
+
+/* Estructural */
+
+.tratamiento_hero {
+  height: 20rem;
+  background-image: url(../img/hero_estructural.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tratamiento_hero .texto h1{
+  color: var(--blanco);
+}
+
+
+@media (min-width: 768px) {
+  .tratamiento_hero {
+    height: 40rem;
+  }
+  
+  .tratamiento_hero .texto h1 {
+    font-size: 10rem;
+  }
+}
+
+.informacion_tratamiento {
+  text-align: justify;
+}
+
+.flex_video {
+  display: flex;
+  justify-content: center;
+  max-width: 100rem;
+  margin: 0 auto;
+  width: 80%;
+}
+
+/* Visceral */
+.tratamiento_hero_visceral {
+  background-image: url(../img/hero_visceral.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* Craneal */
+.hero_craneal {
+  background-image: url(../img/hero_craneal.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* Pediatrica */
+.tratamiento_hero_pediatrica {
+  background-image: url(../img/hero_pediatrica.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+
+.construccion {
+  height: 50rem;
+  background-image: url(../img/construcción.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+@media (min-width: 768px) {
+  .construccion {
+    height: 100rem;
+  }
+}
+
+
+/* Especialidades */
+.terapia {
+  background-color: var(--bgAzul);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-left: var(--bgRosa) solid 10px;
+  transition-property: transform;
+  transition-duration: .3s;
+
+}
+
+.terapia:hover {
+  transform: scale(1.05);
+}
+
+.titulo_terapia {
+  text-transform: uppercase;
+  font: var(--fuentePrincipal);
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+
+/* Pediatri hero */
+.especialidad_pediatria_hero {
+  background-image: url(../img/especialidad_pediatria_hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 5rem;
+}
+
+.especialidad_adultos_hero {
+  background-image: url(../img/hero_estructural.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 5rem;
+}
+
+.especialidad_ginecologia_hero {
+  background-image: url(../img/especialidad_ginecologica_hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 5rem;
+}
+
+.especialidad_deportiva_hero {
+  background-image: url(../img/especialidad_deportiva_hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 5rem;
+}
+
+span {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+li {
+  color: var(--blanco);
+  font-family: var(--fuentePrincipal);
+  font-size: 2rem;
+}
+
+ul {
+  display: block;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osteopatiapp</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/logo.ico">
+
+</head>
+
+<body>
+    <header class="hero">
+        <div class="contenido_hero">
+            <div class="contenido_hero--flex contenedor">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo.png" alt=""></a>
+                </div>
+
+                <nav class="navegacion">
+                    <a class="navegacion__enlace" href="index.html">Tratamientos</a>
+                    <a class="navegacion__enlace" href="osteopatia.html">Osteopatía</a>
+                    <a class="navegacion__enlace" href="especialidades.html">Especialidades</a>
+                    <a class="navegacion__enlace" href="contacto.html">Contacto</a>
+                    <a class="navegacion__enlace navegacion__enlace--activo" href="install.html">Instalar</a>
+                </nav>
+            </div>
+            <h1 class="hero_texto">Instalar</h1>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <h1>¿Cómo instalar nuestra App?</h1>
+        <div>
+            <div>
+                <p class="parrafo_nosotros">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget
+                    aliquam mi. Ut ornare dignissim
+                    justo in consequat. Aliquam hendrerit vehicula ipsum, ac sagittis ex laoreet id. Nullam aliquet
+                    justo quis ipsum efficitur, eget
+                    efficitur risus posuere. Integer pretium efficitur arcu ac pellentesque. Suspendisse eleifend urna
+                    non libero porta, eget ornare
+                    lorem scelerisque. In sollicitudin, felis et mattis sagittis, risus purus efficitur nisl, in feugiat
+                    est sapien eu urna.</p>
+            </div>
+            <!--.nosotros__contenido-->
+        </div>
+        <!--.nosotros-->
+        <div>
+            <button id="installButton" class="formulario__submit" type="button" name="button">Instalar</button>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p class="footer__texto">Osteopatiapp - Todos los derechos reservados 2022.</p>
+    </footer>
+
+    <script src="js/button.js"></script>
+    <script src="js/sw-install.js"></script>
+    <script src="sw.js"></script>
+
+</body>
+
+</html>
