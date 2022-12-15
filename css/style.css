@@ -179,8 +179,8 @@ h3{
   flex-direction: column;
 }
 .resoluciones {
-  width:560px;
-  height:315px
+  width:468px;
+  height:315px;
 }
 
 @media (min-width: 768px){
