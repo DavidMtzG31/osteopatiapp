@@ -502,3 +502,8 @@ iframe {
     height: 480px
   }
 }
+
+.centra_boton {
+  display: flex;
+  justify-content: center;
+}
