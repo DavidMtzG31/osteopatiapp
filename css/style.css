@@ -175,14 +175,16 @@ h3{
 
 /*Nosotros*/
 .nosotros{
-  display: grid;
-  grid-template-rows: repeat(2, auto);
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 768px){
   .nosotros{
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 3rem;  
+    align-items: center;
   }
 }
 
