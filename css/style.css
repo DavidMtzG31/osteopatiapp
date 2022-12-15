@@ -179,8 +179,8 @@ h3{
   flex-direction: column;
 }
 .resoluciones {
-  width: 112px;
-  height: 84px
+  width:112px;
+  height:84px
 }
 
 @media (min-width: 768px){
@@ -190,6 +190,10 @@ h3{
     grid-template-columns: repeat(2, 1fr);
     column-gap: 3rem; 
     align-items: center; 
+  }
+  .resoluciones {
+    width:640px;
+    height:360px
   }
 }
 
