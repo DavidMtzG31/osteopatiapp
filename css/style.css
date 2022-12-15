@@ -178,22 +178,21 @@ h3{
   display: flex;
   flex-direction: column;
 }
-.nosotros .video {
-  width: 640px;
-  height: 480px;
+.video {
+  height: 468px;
 }
-
 
 @media (min-width: 768px){
   .nosotros{
+    display: unset;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 3rem;  
-    align-items: center;
+    column-gap: 3rem; 
+    align-items: center; 
   }
-  .nosotros .video {
-    width: 468px;
-    height: 263px;
+  .video {
+    width:640px;
+    height:360px
   }
 }
 
